@@ -91,7 +91,7 @@
     NSDictionary *item = _data[[indexPath row]];
     if ([item[@"type"] isEqualToString:@"text"]) {
         NSString *text = item[@"data"];
-        CGSize stringSize = [text sizeWithFont:[UIFont systemFontOfSize:12] constrainedToSize:CGSizeMake(280.f, 9999.f) lineBreakMode:NSLineBreakByWordWrapping];
+        CGSize stringSize = [text sizeWithFont:[UIFont systemFontOfSize:12] constrainedToSize:CGSizeMake(280.f, MAXFLOAT) lineBreakMode:NSLineBreakByWordWrapping];
         height = stringSize.height + 20.f;
     } else {
         UILazyImageView *lazyImageView = [[UILazyImageView alloc] init];

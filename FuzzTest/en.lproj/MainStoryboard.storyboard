@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
@@ -40,19 +40,12 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Fz-bi-JIr" customClass="UILazyImageView">
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="42" id="V1I-zI-IgK"/>
-                                                <constraint firstAttribute="width" constant="325" id="yuN-Sa-8KF"/>
-                                            </constraints>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" id="3Fz-bi-JIr" customClass="UILazyImageView">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="42"/>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <constraints>
-                                    <constraint firstItem="3Fz-bi-JIr" firstAttribute="centerY" secondItem="lUO-63-IzW" secondAttribute="centerY" type="default" id="8v3-PY-Ost"/>
-                                    <constraint firstItem="3Fz-bi-JIr" firstAttribute="leading" secondItem="lUO-63-IzW" secondAttribute="leading" type="default" id="vPZ-P6-mJY"/>
-                                </constraints>
                                 <connections>
                                     <outlet property="lazyImageView" destination="3Fz-bi-JIr" id="6Ke-kp-8k4"/>
                                     <segue destination="Voi-xg-A3C" kind="push" identifier="ShowWebViewControllerFromImageTableImageCell" id="8Dk-CH-31H"/>
@@ -98,10 +91,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCI-1v-59y">
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="21" id="xzu-YF-jdr"/>
-                                            </constraints>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" id="hCI-1v-59y">
+                                            <rect key="frame" x="20" y="10" width="280" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -109,11 +100,6 @@
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="hCI-1v-59y" secondAttribute="trailing" constant="20" type="default" id="KXQ-L2-KBm"/>
-                                    <constraint firstItem="hCI-1v-59y" firstAttribute="top" secondItem="fnF-rp-1dZ" secondAttribute="top" constant="11" id="kv1-2W-7fd"/>
-                                    <constraint firstItem="hCI-1v-59y" firstAttribute="leading" secondItem="fnF-rp-1dZ" secondAttribute="leading" constant="20" type="default" id="rpl-oe-R6h"/>
-                                </constraints>
                                 <connections>
                                     <outlet property="textLabel" destination="hCI-1v-59y" id="xON-eZ-mwU"/>
                                     <segue destination="Voi-xg-A3C" kind="push" identifier="ShowWebViewControllerFromTextTableTextCell" id="x9n-Ym-FSO"/>
@@ -151,17 +137,12 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <webView multipleTouchEnabled="YES" contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ulJ-cF-7Ho">
+                            <webView multipleTouchEnabled="YES" contentMode="scaleToFill" scalesPageToFit="YES" id="ulJ-cF-7Ho">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="ulJ-cF-7Ho" firstAttribute="trailing" secondItem="SEr-sB-Fzz" secondAttribute="trailing" type="default" id="L4x-HO-EAL"/>
-                            <constraint firstItem="ulJ-cF-7Ho" firstAttribute="leading" secondItem="SEr-sB-Fzz" secondAttribute="leading" type="default" id="Q9I-gg-pgm"/>
-                            <constraint firstItem="ulJ-cF-7Ho" firstAttribute="bottom" secondItem="SEr-sB-Fzz" secondAttribute="bottom" type="default" id="R4D-9Z-SmP"/>
-                            <constraint firstItem="ulJ-cF-7Ho" firstAttribute="top" secondItem="SEr-sB-Fzz" secondAttribute="top" type="default" id="kFS-c0-inV"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qnr-1k-nnm"/>
                     <connections>
@@ -188,10 +169,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="vxd-Wo-P8c">
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="21" id="PBy-2E-ynO"/>
-                                            </constraints>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" id="vxd-Wo-P8c">
+                                            <rect key="frame" x="20" y="11" width="280" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -199,11 +178,6 @@
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <constraints>
-                                    <constraint firstItem="vxd-Wo-P8c" firstAttribute="leading" secondItem="psm-PJ-mVR" secondAttribute="leading" constant="20" type="default" id="Ikb-n6-ev6"/>
-                                    <constraint firstItem="vxd-Wo-P8c" firstAttribute="top" secondItem="psm-PJ-mVR" secondAttribute="top" constant="11" id="PNT-fe-Z3C"/>
-                                    <constraint firstAttribute="trailing" secondItem="vxd-Wo-P8c" secondAttribute="trailing" constant="20" type="default" id="Zxe-CR-Dhi"/>
-                                </constraints>
                                 <connections>
                                     <outlet property="textLabel" destination="vxd-Wo-P8c" id="KVo-9T-OD9"/>
                                     <segue destination="Voi-xg-A3C" kind="push" identifier="ShowWebViewControllerFromAllTableTextCell" id="IwE-ej-DrN"/>
@@ -216,19 +190,12 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gtj-rc-CJg" customClass="UILazyImageView">
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="43" id="ipt-XD-9sX"/>
-                                            </constraints>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" id="Gtj-rc-CJg" customClass="UILazyImageView">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <constraints>
-                                    <constraint firstItem="Gtj-rc-CJg" firstAttribute="trailing" secondItem="IgV-cx-qiU" secondAttribute="trailing" type="default" id="7qX-XF-k1E"/>
-                                    <constraint firstItem="Gtj-rc-CJg" firstAttribute="leading" secondItem="IgV-cx-qiU" secondAttribute="leading" type="default" id="AK4-gm-El9"/>
-                                    <constraint firstItem="Gtj-rc-CJg" firstAttribute="top" secondItem="IgV-cx-qiU" secondAttribute="top" type="default" id="jfn-Jx-TgW"/>
-                                </constraints>
                                 <connections>
                                     <outlet property="lazyImageView" destination="Gtj-rc-CJg" id="Inh-Tb-2zU"/>
                                     <segue destination="Voi-xg-A3C" kind="push" identifier="ShowWebViewControllerFromAllTableImageCell" id="1x7-hx-jcn"/>
@@ -272,9 +239,6 @@
         <class className="ImagesOnlyTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ImagesOnlyTableViewController.h"/>
         </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
         <class className="TextCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TextCell.h"/>
             <relationships>
@@ -300,6 +264,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="IwE-ej-DrN"/>
+        <segue reference="8Dk-CH-31H"/>
     </inferredMetricsTieBreakers>
 </document>

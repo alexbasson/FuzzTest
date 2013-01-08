@@ -76,16 +76,17 @@
     NSDictionary *item = _data[[indexPath row]];
     TextCell *cell = (TextCell *)[tableView dequeueReusableCellWithIdentifier:@"TextTableTextCell" forIndexPath:indexPath];
     [[cell textLabel] setText:item[@"data"]];
-    [[cell textLabel] sizeToFit];
     return cell;
 }
+
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSDictionary *item = _data[[indexPath row]];
     NSString *text = item[@"data"];
-    CGSize stringSize = [text sizeWithFont:[UIFont systemFontOfSize:12] constrainedToSize:CGSizeMake(280.f, 9999.f) lineBreakMode:NSLineBreakByWordWrapping];
+    CGSize stringSize = [text sizeWithFont:[UIFont systemFontOfSize:12] constrainedToSize:CGSizeMake(280.f, MAXFLOAT) lineBreakMode:NSLineBreakByWordWrapping];
     return stringSize.height + 20.f;
 }
+
 
 @end
