@@ -7,6 +7,7 @@
 //
 
 #import "ImagesOnlyTableViewController.h"
+#import "WebViewController.h"
 
 @interface ImagesOnlyTableViewController ()
 
@@ -38,6 +39,16 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"ShowWebViewController"]) {
+        WebViewController *webViewController = [segue destinationViewController];
+        NSURL *url = [NSURL URLWithString:@"http://fuzzproductions.com"];
+        NSURLRequest *request = [NSURLRequest requestWithURL:url];
+        [[webViewController webView] loadRequest:request];
+    }
 }
 
 #pragma mark - Table view data source
