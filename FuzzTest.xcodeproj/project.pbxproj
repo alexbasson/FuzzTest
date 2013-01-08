@@ -20,6 +20,7 @@
 		FA59B761169C86770023634B /* AllTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA59B760169C86770023634B /* AllTableViewController.m */; };
 		FA59B764169C868E0023634B /* TextOnlyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA59B763169C868E0023634B /* TextOnlyTableViewController.m */; };
 		FA59B767169C869F0023634B /* ImagesOnlyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA59B766169C869F0023634B /* ImagesOnlyTableViewController.m */; };
+		FA59B76A169C88260023634B /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA59B769169C88260023634B /* WebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,8 @@
 		FA59B763169C868E0023634B /* TextOnlyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextOnlyTableViewController.m; sourceTree = "<group>"; };
 		FA59B765169C869F0023634B /* ImagesOnlyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagesOnlyTableViewController.h; sourceTree = "<group>"; };
 		FA59B766169C869F0023634B /* ImagesOnlyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagesOnlyTableViewController.m; sourceTree = "<group>"; };
+		FA59B768169C88260023634B /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		FA59B769169C88260023634B /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +101,8 @@
 				FA59B763169C868E0023634B /* TextOnlyTableViewController.m */,
 				FA59B765169C869F0023634B /* ImagesOnlyTableViewController.h */,
 				FA59B766169C869F0023634B /* ImagesOnlyTableViewController.m */,
+				FA59B768169C88260023634B /* WebViewController.h */,
+				FA59B769169C88260023634B /* WebViewController.m */,
 				FA59B738169C85A40023634B /* Supporting Files */,
 			);
 			path = FuzzTest;
@@ -188,6 +193,7 @@
 				FA59B761169C86770023634B /* AllTableViewController.m in Sources */,
 				FA59B764169C868E0023634B /* TextOnlyTableViewController.m in Sources */,
 				FA59B767169C869F0023634B /* ImagesOnlyTableViewController.m in Sources */,
+				FA59B76A169C88260023634B /* WebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
