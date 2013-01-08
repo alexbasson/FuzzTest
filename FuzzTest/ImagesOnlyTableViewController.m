@@ -11,7 +11,7 @@
 #import "WebViewController.h"
 
 @interface ImagesOnlyTableViewController ()
-
+@property (nonatomic, strong) NSArray *data;
 @end
 
 @implementation ImagesOnlyTableViewController
@@ -44,11 +44,9 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"ShowWebViewController"]) {
+    if ([[segue identifier] isEqualToString:@"ShowWebViewControllerFromImageTableTextCell"]) {
         WebViewController *webViewController = [segue destinationViewController];
-        NSURL *url = [NSURL URLWithString:@"http://fuzzproductions.com"];
-        NSURLRequest *request = [NSURLRequest requestWithURL:url];
-        [[webViewController webView] loadRequest:request];
+        [webViewController setUrl:[NSURL URLWithString:@"http://fuzzproductions.com"]];
     }
 }
 
@@ -56,9 +54,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

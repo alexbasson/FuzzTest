@@ -11,7 +11,7 @@
 #import "WebViewController.h"
 
 @interface TextOnlyTableViewController ()
-
+@property (nonatomic, strong) NSArray *data;
 @end
 
 @implementation TextOnlyTableViewController
@@ -44,22 +44,17 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"ShowWebViewController"]) {
+    if ([[segue identifier] isEqualToString:@"ShowWebViewControllerFromTextTableTextCell"]) {
         WebViewController *webViewController = [segue destinationViewController];
-        NSURL *url = [NSURL URLWithString:@"http://fuzzproductions.com"];
-        NSURLRequest *request = [NSURLRequest requestWithURL:url];
-        [[webViewController webView] loadRequest:request];
+        [webViewController setUrl:[NSURL URLWithString:@"http://fuzzproductions.com"]];
     }
 }
-
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

@@ -27,6 +27,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    //NSURL *url = [NSURL URLWithString:@"http://fuzzproductions.com"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[self url]];
+    [[self webView] loadRequest:request];
 }
 
 - (void)didReceiveMemoryWarning

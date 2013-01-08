@@ -7,12 +7,13 @@
 //
 
 #import "AllTableViewController.h"
+#import "DataLoader.h"
 #import "TextCell.h"
 #import "ImageCell.h"
 #import "WebViewController.h"
 
 @interface AllTableViewController ()
-
+@property NSArray *data;
 @end
 
 @implementation AllTableViewController
@@ -29,12 +30,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [self setData:[DataLoader dataFromURL:[NSURL URLWithString:@"http://dev.fuzzproductions.com/MobileTest/test.json"]]];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [[self tableView] reloadData];
+        });
+    });
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,11 +47,9 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"ShowWebViewController"]) {
+    if ([[segue identifier] isEqualToString:@"ShowWebViewControllerFromAllTableTextCell"] || [[segue identifier] isEqualToString:@"ShowWebViewControllerFromAllTableImageCell"]) {
         WebViewController *webViewController = [segue destinationViewController];
-        NSURL *url = [NSURL URLWithString:@"http://fuzzproductions.com"];
-        NSURLRequest *request = [NSURLRequest requestWithURL:url];
-        [[webViewController webView] loadRequest:request];
+        [webViewController setUrl:[NSURL URLWithString:@"http://fuzzproductions.com"]];
     }
 }
 
@@ -57,24 +57,24 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return [[self data] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSDictionary *item = [self data][[indexPath row]];
+    
     UITableViewCell *cell;
-    if (YES) {
+    if ([item[@"type"] isEqualToString:@"text"]) {
         cell = (TextCell *)[tableView dequeueReusableCellWithIdentifier:@"AllTableTextCell" forIndexPath:indexPath];
+        [[cell textLabel] setText:item[@"data"]];
     } else {
+        NSLog(@"image cell");
         cell = (ImageCell *)[tableView dequeueReusableCellWithIdentifier:@"AllTableImageCell" forIndexPath:indexPath];
     }
     

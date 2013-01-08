@@ -23,6 +23,7 @@
 		FA59B76A169C88260023634B /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA59B769169C88260023634B /* WebViewController.m */; };
 		FA59B76D169C8D3A0023634B /* TextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA59B76C169C8D3A0023634B /* TextCell.m */; };
 		FA59B770169C8D4C0023634B /* ImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA59B76F169C8D4C0023634B /* ImageCell.m */; };
+		FA70E834169C9C6200EADAC5 /* DataLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = FA70E833169C9C6200EADAC5 /* DataLoader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,8 @@
 		FA59B76C169C8D3A0023634B /* TextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextCell.m; sourceTree = "<group>"; };
 		FA59B76E169C8D4C0023634B /* ImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCell.h; sourceTree = "<group>"; };
 		FA59B76F169C8D4C0023634B /* ImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCell.m; sourceTree = "<group>"; };
+		FA70E832169C9C6200EADAC5 /* DataLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataLoader.h; sourceTree = "<group>"; };
+		FA70E833169C9C6200EADAC5 /* DataLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataLoader.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +116,8 @@
 				FA59B76F169C8D4C0023634B /* ImageCell.m */,
 				FA59B768169C88260023634B /* WebViewController.h */,
 				FA59B769169C88260023634B /* WebViewController.m */,
+				FA70E832169C9C6200EADAC5 /* DataLoader.h */,
+				FA70E833169C9C6200EADAC5 /* DataLoader.m */,
 				FA59B738169C85A40023634B /* Supporting Files */,
 			);
 			path = FuzzTest;
@@ -206,6 +211,7 @@
 				FA59B76A169C88260023634B /* WebViewController.m in Sources */,
 				FA59B76D169C8D3A0023634B /* TextCell.m in Sources */,
 				FA59B770169C8D4C0023634B /* ImageCell.m in Sources */,
+				FA70E834169C9C6200EADAC5 /* DataLoader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +328,7 @@
 				FA59B75E169C85A40023634B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
