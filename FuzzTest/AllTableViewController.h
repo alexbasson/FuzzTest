@@ -1,5 +1,5 @@
 //
-//  SecondViewController.h
+//  AllTableViewController.h
 //  FuzzTest
 //
 //  Created by Alex on 1/8/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController
+@interface AllTableViewController : UITableViewController
 
 @end

@@ -1,5 +1,5 @@
 //
-//  FirstViewController.h
+//  TextOnlyTableViewController.h
 //  FuzzTest
 //
 //  Created by Alex on 1/8/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
+@interface TextOnlyTableViewController : UITableViewController
 
 @end

@@ -17,12 +17,9 @@
 		FA59B746169C85A40023634B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA59B745169C85A40023634B /* Default@2x.png */; };
 		FA59B748169C85A40023634B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA59B747169C85A40023634B /* Default-568h@2x.png */; };
 		FA59B74B169C85A40023634B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA59B749169C85A40023634B /* MainStoryboard.storyboard */; };
-		FA59B74E169C85A40023634B /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA59B74D169C85A40023634B /* FirstViewController.m */; };
-		FA59B750169C85A40023634B /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = FA59B74F169C85A40023634B /* first.png */; };
-		FA59B752169C85A40023634B /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA59B751169C85A40023634B /* first@2x.png */; };
-		FA59B755169C85A40023634B /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA59B754169C85A40023634B /* SecondViewController.m */; };
-		FA59B757169C85A40023634B /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = FA59B756169C85A40023634B /* second.png */; };
-		FA59B759169C85A40023634B /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA59B758169C85A40023634B /* second@2x.png */; };
+		FA59B761169C86770023634B /* AllTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA59B760169C86770023634B /* AllTableViewController.m */; };
+		FA59B764169C868E0023634B /* TextOnlyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA59B763169C868E0023634B /* TextOnlyTableViewController.m */; };
+		FA59B767169C869F0023634B /* ImagesOnlyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA59B766169C869F0023634B /* ImagesOnlyTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,14 +37,12 @@
 		FA59B745169C85A40023634B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		FA59B747169C85A40023634B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		FA59B74A169C85A40023634B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		FA59B74C169C85A40023634B /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		FA59B74D169C85A40023634B /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		FA59B74F169C85A40023634B /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		FA59B751169C85A40023634B /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		FA59B753169C85A40023634B /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		FA59B754169C85A40023634B /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		FA59B756169C85A40023634B /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
-		FA59B758169C85A40023634B /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		FA59B75F169C86770023634B /* AllTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllTableViewController.h; sourceTree = "<group>"; };
+		FA59B760169C86770023634B /* AllTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllTableViewController.m; sourceTree = "<group>"; };
+		FA59B762169C868E0023634B /* TextOnlyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextOnlyTableViewController.h; sourceTree = "<group>"; };
+		FA59B763169C868E0023634B /* TextOnlyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextOnlyTableViewController.m; sourceTree = "<group>"; };
+		FA59B765169C869F0023634B /* ImagesOnlyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagesOnlyTableViewController.h; sourceTree = "<group>"; };
+		FA59B766169C869F0023634B /* ImagesOnlyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagesOnlyTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,14 +92,12 @@
 				FA59B740169C85A40023634B /* AppDelegate.h */,
 				FA59B741169C85A40023634B /* AppDelegate.m */,
 				FA59B749169C85A40023634B /* MainStoryboard.storyboard */,
-				FA59B74C169C85A40023634B /* FirstViewController.h */,
-				FA59B74D169C85A40023634B /* FirstViewController.m */,
-				FA59B74F169C85A40023634B /* first.png */,
-				FA59B751169C85A40023634B /* first@2x.png */,
-				FA59B753169C85A40023634B /* SecondViewController.h */,
-				FA59B754169C85A40023634B /* SecondViewController.m */,
-				FA59B756169C85A40023634B /* second.png */,
-				FA59B758169C85A40023634B /* second@2x.png */,
+				FA59B75F169C86770023634B /* AllTableViewController.h */,
+				FA59B760169C86770023634B /* AllTableViewController.m */,
+				FA59B762169C868E0023634B /* TextOnlyTableViewController.h */,
+				FA59B763169C868E0023634B /* TextOnlyTableViewController.m */,
+				FA59B765169C869F0023634B /* ImagesOnlyTableViewController.h */,
+				FA59B766169C869F0023634B /* ImagesOnlyTableViewController.m */,
 				FA59B738169C85A40023634B /* Supporting Files */,
 			);
 			path = FuzzTest;
@@ -180,10 +173,6 @@
 				FA59B746169C85A40023634B /* Default@2x.png in Resources */,
 				FA59B748169C85A40023634B /* Default-568h@2x.png in Resources */,
 				FA59B74B169C85A40023634B /* MainStoryboard.storyboard in Resources */,
-				FA59B750169C85A40023634B /* first.png in Resources */,
-				FA59B752169C85A40023634B /* first@2x.png in Resources */,
-				FA59B757169C85A40023634B /* second.png in Resources */,
-				FA59B759169C85A40023634B /* second@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,8 +185,9 @@
 			files = (
 				FA59B73E169C85A40023634B /* main.m in Sources */,
 				FA59B742169C85A40023634B /* AppDelegate.m in Sources */,
-				FA59B74E169C85A40023634B /* FirstViewController.m in Sources */,
-				FA59B755169C85A40023634B /* SecondViewController.m in Sources */,
+				FA59B761169C86770023634B /* AllTableViewController.m in Sources */,
+				FA59B764169C868E0023634B /* TextOnlyTableViewController.m in Sources */,
+				FA59B767169C869F0023634B /* ImagesOnlyTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
