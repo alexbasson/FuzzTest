@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UILazyImageView.h"
 
 @interface ImageCell : UITableViewCell
 
-@property (nonatomic, weak) IBOutlet UIImageView *imageView;
+@property (nonatomic, weak) IBOutlet UILazyImageView *lazyImageView;
 
 @end

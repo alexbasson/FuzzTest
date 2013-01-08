@@ -7,6 +7,7 @@
 //
 
 #import "ImagesOnlyTableViewController.h"
+#import "DataLoader.h"
 #import "ImageCell.h"
 #import "WebViewController.h"
 
@@ -29,11 +30,16 @@
 {
     [super viewDidLoad];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        _data = [DataLoader dataFromURL:[NSURL URLWithString:@"http://dev.fuzzproductions.com/MobileTest/test.json"]];
+        NSPredicate *imagePredicate = [NSPredicate predicateWithBlock:^BOOL(id evaluatedObject, NSDictionary * bindings) {
+            return [evaluatedObject[@"type"] isEqualToString:@"image"];
+        }];
+        _data = [_data filteredArrayUsingPredicate:imagePredicate];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [[self tableView] reloadData];
+        });
+    });
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,7 +50,7 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"ShowWebViewControllerFromImageTableTextCell"]) {
+    if ([[segue identifier] isEqualToString:@"ShowWebViewControllerFromImageTableImageCell"]) {
         WebViewController *webViewController = [segue destinationViewController];
         [webViewController setUrl:[NSURL URLWithString:@"http://fuzzproductions.com"]];
     }
@@ -59,68 +65,31 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    if (section != 0) {
+        return 0;
+    }
+    return [[self data] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSDictionary *item = _data[[indexPath row]];
     ImageCell *cell = (ImageCell *)[tableView dequeueReusableCellWithIdentifier:@"ImageTableImageCell" forIndexPath:indexPath];
-        
+    [[cell lazyImageView] imageFromURL:[NSURL URLWithString:item[@"data"]]];
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-#pragma mark - Table view delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    NSDictionary *item = _data[[indexPath row]];
+    UILazyImageView *lazyImageView = [[UILazyImageView alloc] init];
+    [lazyImageView imageFromURL:[NSURL URLWithString:item[@"data"]]];
+    CGSize imageSize = [[lazyImageView image] size];
+    CGFloat scaleFactor = 1.f;
+    if (imageSize.width > 0) {
+        scaleFactor = 320.f/imageSize.width;
+    }
+    return imageSize.height * scaleFactor;
 }
 
 @end

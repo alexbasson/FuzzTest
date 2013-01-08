@@ -24,10 +24,10 @@
             </objects>
             <point key="canvasLocation" x="153" y="157"/>
         </scene>
-        <!--Table View Controller - Images Only-->
+        <!--Images Only Table View Controller - Images Only-->
         <scene sceneID="41e-xL-LrC">
             <objects>
-                <tableViewController id="63b-BD-DRH" sceneMemberID="viewController">
+                <tableViewController id="63b-BD-DRH" customClass="ImagesOnlyTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ny9-i6-Gaj">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -40,7 +40,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Fz-bi-JIr">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Fz-bi-JIr" customClass="UILazyImageView">
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="42" id="V1I-zI-IgK"/>
                                                 <constraint firstAttribute="width" constant="325" id="yuN-Sa-8KF"/>
@@ -54,7 +54,7 @@
                                     <constraint firstItem="3Fz-bi-JIr" firstAttribute="leading" secondItem="lUO-63-IzW" secondAttribute="leading" type="default" id="vPZ-P6-mJY"/>
                                 </constraints>
                                 <connections>
-                                    <outlet property="imageView" destination="3Fz-bi-JIr" id="JkS-AR-G6I"/>
+                                    <outlet property="lazyImageView" destination="3Fz-bi-JIr" id="6Ke-kp-8k4"/>
                                     <segue destination="Voi-xg-A3C" kind="push" identifier="ShowWebViewControllerFromImageTableImageCell" id="8Dk-CH-31H"/>
                                 </connections>
                             </tableViewCell>
@@ -98,8 +98,11 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCI-1v-59y">
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCI-1v-59y">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="xzu-YF-jdr"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
@@ -185,8 +188,11 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vxd-Wo-P8c">
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="vxd-Wo-P8c">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="PBy-2E-ynO"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
@@ -210,7 +216,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gtj-rc-CJg">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gtj-rc-CJg" customClass="UILazyImageView">
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="43" id="ipt-XD-9sX"/>
                                             </constraints>
@@ -224,7 +230,7 @@
                                     <constraint firstItem="Gtj-rc-CJg" firstAttribute="top" secondItem="IgV-cx-qiU" secondAttribute="top" type="default" id="jfn-Jx-TgW"/>
                                 </constraints>
                                 <connections>
-                                    <outlet property="imageView" destination="Gtj-rc-CJg" id="KKv-Li-Iuz"/>
+                                    <outlet property="lazyImageView" destination="Gtj-rc-CJg" id="Inh-Tb-2zU"/>
                                     <segue destination="Voi-xg-A3C" kind="push" identifier="ShowWebViewControllerFromAllTableImageCell" id="1x7-hx-jcn"/>
                                 </connections>
                             </tableViewCell>
@@ -260,8 +266,11 @@
         <class className="ImageCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ImageCell.h"/>
             <relationships>
-                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="lazyImageView" candidateClass="UILazyImageView"/>
             </relationships>
+        </class>
+        <class className="ImagesOnlyTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ImagesOnlyTableViewController.h"/>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
@@ -274,6 +283,9 @@
         </class>
         <class className="TextOnlyTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TextOnlyTableViewController.h"/>
+        </class>
+        <class className="UILazyImageView" superclassName="UIImageView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UILazyImageView.h"/>
         </class>
         <class className="WebViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/WebViewController.h"/>

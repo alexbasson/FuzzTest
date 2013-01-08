@@ -24,6 +24,8 @@
 		FA59B76D169C8D3A0023634B /* TextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA59B76C169C8D3A0023634B /* TextCell.m */; };
 		FA59B770169C8D4C0023634B /* ImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA59B76F169C8D4C0023634B /* ImageCell.m */; };
 		FA70E834169C9C6200EADAC5 /* DataLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = FA70E833169C9C6200EADAC5 /* DataLoader.m */; };
+		FA70E83A169CABCD00EADAC5 /* UILazyImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA70E837169CA80F00EADAC5 /* UILazyImageView.m */; };
+		FA70E83B169CAE0600EADAC5 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = FA70E839169CA82100EADAC5 /* NSString+MD5.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +57,10 @@
 		FA59B76F169C8D4C0023634B /* ImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCell.m; sourceTree = "<group>"; };
 		FA70E832169C9C6200EADAC5 /* DataLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataLoader.h; sourceTree = "<group>"; };
 		FA70E833169C9C6200EADAC5 /* DataLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataLoader.m; sourceTree = "<group>"; };
+		FA70E836169CA80F00EADAC5 /* UILazyImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UILazyImageView.h; sourceTree = "<group>"; };
+		FA70E837169CA80F00EADAC5 /* UILazyImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UILazyImageView.m; sourceTree = "<group>"; };
+		FA70E838169CA82100EADAC5 /* NSString+MD5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		FA70E839169CA82100EADAC5 /* NSString+MD5.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,8 @@
 		FA59B737169C85A40023634B /* FuzzTest */ = {
 			isa = PBXGroup;
 			children = (
+				FA70E838169CA82100EADAC5 /* NSString+MD5.h */,
+				FA70E839169CA82100EADAC5 /* NSString+MD5.m */,
 				FA59B740169C85A40023634B /* AppDelegate.h */,
 				FA59B741169C85A40023634B /* AppDelegate.m */,
 				FA59B749169C85A40023634B /* MainStoryboard.storyboard */,
@@ -118,6 +126,8 @@
 				FA59B769169C88260023634B /* WebViewController.m */,
 				FA70E832169C9C6200EADAC5 /* DataLoader.h */,
 				FA70E833169C9C6200EADAC5 /* DataLoader.m */,
+				FA70E836169CA80F00EADAC5 /* UILazyImageView.h */,
+				FA70E837169CA80F00EADAC5 /* UILazyImageView.m */,
 				FA59B738169C85A40023634B /* Supporting Files */,
 			);
 			path = FuzzTest;
@@ -212,6 +222,8 @@
 				FA59B76D169C8D3A0023634B /* TextCell.m in Sources */,
 				FA59B770169C8D4C0023634B /* ImageCell.m in Sources */,
 				FA70E834169C9C6200EADAC5 /* DataLoader.m in Sources */,
+				FA70E83A169CABCD00EADAC5 /* UILazyImageView.m in Sources */,
+				FA70E83B169CAE0600EADAC5 /* NSString+MD5.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
