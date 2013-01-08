@@ -7,6 +7,8 @@
 //
 
 #import "AllTableViewController.h"
+#import "TextCell.h"
+#import "ImageCell.h"
 #import "WebViewController.h"
 
 @interface AllTableViewController ()
@@ -69,10 +71,12 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    // Configure the cell...
+    UITableViewCell *cell;
+    if (YES) {
+        cell = (TextCell *)[tableView dequeueReusableCellWithIdentifier:@"AllTableTextCell" forIndexPath:indexPath];
+    } else {
+        cell = (ImageCell *)[tableView dequeueReusableCellWithIdentifier:@"AllTableImageCell" forIndexPath:indexPath];
+    }
     
     return cell;
 }

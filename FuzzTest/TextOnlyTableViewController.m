@@ -7,6 +7,7 @@
 //
 
 #import "TextOnlyTableViewController.h"
+#import "TextCell.h"
 #import "WebViewController.h"
 
 @interface TextOnlyTableViewController ()
@@ -70,10 +71,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    // Configure the cell...
+    TextCell *cell = (TextCell *)[tableView dequeueReusableCellWithIdentifier:@"TextTableTextCell" forIndexPath:indexPath];
     
     return cell;
 }

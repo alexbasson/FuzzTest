@@ -7,6 +7,7 @@
 //
 
 #import "ImagesOnlyTableViewController.h"
+#import "ImageCell.h"
 #import "WebViewController.h"
 
 @interface ImagesOnlyTableViewController ()
@@ -69,11 +70,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+    ImageCell *cell = (ImageCell *)[tableView dequeueReusableCellWithIdentifier:@"ImageTableImageCell" forIndexPath:indexPath];
+        
     return cell;
 }
 
